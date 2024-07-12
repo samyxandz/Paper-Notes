@@ -76,3 +76,10 @@ Instead of having one attention mechanism, multi-head attention has several "hea
 good stuff on attention heads :
 https://lena-voita.github.io/posts/acl19_heads.html 
 
+
+    References:
+    - https://lena-voita.github.io/nlp_course.html
+    - https://arxiv.org/pdf/1706.03762
+    - https://www.youtube.com/watch?v=zxQyTK8quyY
+    - https://www.youtube.com/watch?v=iDulhoQ2pro 
+    - https://www.youtube.com/watch?v=kCc8FmEb1nY
