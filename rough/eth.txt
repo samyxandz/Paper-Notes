@@ -1,0 +1,61 @@
+-  Ethereum intends to provide is a blockchain with a built-in
+fully fledged Turing-complete programming language that can be used to create "contracts" that can be used
+to encode arbitrary state transition functions, allowing users to create any of the systems described above, as
+well as many others that we have not yet imagined, simply by writing up the logic in a few lines of code.
+
+- Chaumian blinding
+Chaumian blinding is a cryptographic technique used to ensure the privacy and anonymity of digital transactions
+
+Blinding: The sender generates a message and then "blinds" it using a random blinding factor.The blinding process ensures that the signer cannot see the actual content of the message.
+
+Signing: The blinded message is sent to the signer. The signer applies their digital signature to the blinded message without knowing its actual content. This signature is then sent back to the sender.
+
+Unblinding: The sender receives the signed, blinded message and uses the previously generated blinding factor to "unblind" the message. 
+
+Verification: The resulting signed message can be verified by anyone using the signer's public key, ensuring that the signature is valid and that the signer cannot link the signed message back to the original blinded message they signed.
+
+- RPOW
+
+RPOW allows PoW tokens to be reused or transferred from one user to another, rather than being a single-use mechanism.
+
+Proof of Work (PoW): A PoW system requires participants to solve computationally intensive problems to demonstrate their commitment to a certain task. 
+Reusable Tokens: RPOW introduces a mechanism where the PoW token can be transferred between parties, making it reusable.
+
+Token Issuance and Validation: In an RPOW system, tokens are issued based on the completion of PoW tasks. These tokens can be validated by a server or network that verifies the authenticity and uniqueness of each token.
+
+- currency is a first-to-file application, where the order of transactions is often of critical
+importance, decentralized currencies require a solution to decentralized consensus
+
+- the Bitcoin ledger can be thought of as a state transition system, where there is
+a "state" consisting of the ownership status of all existing bitcoins and a "state transition function" that takes
+a state and a transaction and outputs a new state which is the result.
+
+The "state" in Bitcoin is the collection of all coins (technically, "unspent transaction outputs" or UTXO) that
+have been minted and not yet spent, with each UTXO having a denomination and an owner (defined by a
+20-byte address which is essentially a cryptographic public key
+
+ - MArkel trees
+
+ A Merkle tree (or hash tree) is a data structure used in computer science and cryptography to efficiently and securely verify the integrity of large sets of data. 
+ It is a binary tree in which each leaf node represents a hash of a data block, and each non-leaf node represents the hash of its children. 
+
+Building a Merkle Tree
+Hash the Data Blocks: Start by hashing each individual data block to create the leaf nodes of the tree.
+Pair and Hash: Pair up the leaf nodes and hash their concatenated values to form the next level of nodes.
+Repeat: Continue pairing and hashing nodes until you reach the root node, which is the final hash representing the entire data set.
+
+Example
+step 1: Hash the Data Blocks
+Step 2: Create the Next Level
+step 3: Create the Root
+
+
+Hash(A), Hash(B), Hash(C), Hash(D)
+next level 
+Hash(AB) = Hash(Hash(A) + Hash(B))
+Hash(CD) = Hash(Hash(C) + Hash(D))
+root
+Merkle Root = Hash(Hash(AB) + Hash(CD))
+
+only small part of the data is required to produce the merkle proof
+
