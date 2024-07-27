@@ -59,3 +59,49 @@ Merkle Root = Hash(Hash(AB) + Hash(CD))
 
 only small part of the data is required to produce the merkle proof
 
+pg 13 
+
+
+# Ethereum
+
+The intent of Ethereum is to merge together and improve upon the concepts of scripting, altcoins and on-chain
+meta-protocols, and allow developers to create arbitrary consensus-based applications that have the
+scalability, standardization, feature-completeness, ease of development and interoperability offered by these
+different paradigms all at the same time.
+
+"a blockchain with a built-in Turing-complete programming language"
+
+## Etherium Accounts
+Ethereum, the state is made up of objects called "accounts"
+state transitions being direct transfers of value and information between account
+ An Ethereum account
+contains four fields:
+● The nonce, a counter used to make sure each transaction can only be processed once
+● The account's current ether balance
+● The account's contract code, if present
+● The account's storage (empty by default)
+
+In general, there are
+two types of accounts: externally owned accounts, controlled by private keys, and contract accounts, controlled
+by their contract code. 
+
+First, an Ethereum message can be created either by an external entity or a contract, whereas a
+Bitcoin transaction can only be created externally. Second, there is an explicit option for Ethereum messages
+to contain data. Finally, the recipient of an Ethereum message, if it is a contract account, has the option to
+return a response; this means that Ethereum messages also encompass the concept of functions.
+
+The term "transaction" is used in Ethereum to refer to the signed data package that stores a message to be
+sent from an externally owned account.
+
+Code Execution
+
+The code in Ethereum contracts is written in a low-level, stack-based bytecode language, referred to as
+"Ethereum virtual machine code" or "EVM code"
+
+The formal execution model of EVM code is surprisingly simple
+ While the Ethereum virtual machine is
+running, its full computational state can be defined by the tuple (block_state, transaction, message, code,
+memory, stack, pc, gas), where block_state is the global state containing all accounts and includes balances
+and storage. 
+Every round of execution, the current instruction is found by taking the pc-th byte of code, and
+each instruction has its own definition in terms of how it affects the tuple.
